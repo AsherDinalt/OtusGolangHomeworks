@@ -1,12 +1,11 @@
 package main
 
 import (
-	"fmt" //nolint:gci
+	"fmt"
 
 	"github.com/AsherDinalt/OtusGolangHomeworks/hw02_fix_app/printer"
 	"github.com/AsherDinalt/OtusGolangHomeworks/hw02_fix_app/reader"
 	"github.com/AsherDinalt/OtusGolangHomeworks/hw02_fix_app/types"
-	//nolint:gci
 )
 
 func main() {

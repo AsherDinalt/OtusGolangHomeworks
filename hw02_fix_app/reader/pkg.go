@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"os" //nolint:gci
+	"os"
 
-	"github.com/AsherDinalt/OtusGolangHomeworks/hw02_fix_app/types" //nolint:gci
+	"github.com/AsherDinalt/OtusGolangHomeworks/hw02_fix_app/types"
 )
 
 func ReadJSON(filePath string, _ int) ([]types.Employee, error) {
