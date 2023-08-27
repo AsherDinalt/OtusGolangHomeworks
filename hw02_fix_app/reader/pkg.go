@@ -3,9 +3,10 @@ package reader
 import (
 	"encoding/json"
 	"fmt"
-	"hw02_fix_app/types" //nolint:gci
 	"io"
 	"os" //nolint:gci
+
+	"github.com/AsherDinalt/OtusGolangHomeworks/hw02_fix_app/types" //nolint:gci
 )
 
 func ReadJSON(filePath string, _ int) ([]types.Employee, error) {
@@ -22,9 +23,10 @@ func ReadJSON(filePath string, _ int) ([]types.Employee, error) {
 
 	var data []types.Employee
 
-	json.Unmarshal(bytes, &data)
+	err = json.Unmarshal(bytes, &data)
+	if err != nil {
+		return nil, err
+	}
 
-	res := data
-
-	return res, nil
+	return data, nil
 }

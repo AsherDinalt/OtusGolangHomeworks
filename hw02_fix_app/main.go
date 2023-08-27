@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt" //nolint:gci
-	"hw02_fix_app/printer"
-	"hw02_fix_app/reader"
-	"hw02_fix_app/types"
+
+	"github.com/AsherDinalt/OtusGolangHomeworks/hw02_fix_app/printer"
+	"github.com/AsherDinalt/OtusGolangHomeworks/hw02_fix_app/reader"
+	"github.com/AsherDinalt/OtusGolangHomeworks/hw02_fix_app/types"
 	//nolint:gci
 )
 
