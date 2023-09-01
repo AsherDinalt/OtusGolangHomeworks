@@ -14,8 +14,8 @@ type BookCompare struct {
 	bookField BookField
 }
 
-func NewBookCompare(bf BookField) BookCompare {
-	return BookCompare{
+func NewBookCompare(bf BookField) *BookCompare {
+	return &BookCompare{
 		bookField: bf,
 	}
 }
@@ -42,43 +42,43 @@ type Book struct {
 	rate   float32
 }
 
-func SetID(id int, b *Book) {
+func (b *Book) SetID(id int) {
 	b.id = id
 }
 
-func SetTitle(title string, b *Book) {
+func (b *Book) SetTitle(title string) {
 	b.title = title
 }
 
-func SetAuthor(author string, b *Book) {
+func (b *Book) SetAuthor(author string) {
 	b.author = author
 }
 
-func SetYear(year int, b *Book) {
+func (b *Book) SetYear(year int) {
 	b.year = year
 }
 
-func SetSize(size int, b *Book) {
+func (b *Book) SetSize(size int) {
 	b.size = size
 }
 
-func SetRate(rate float32, b *Book) {
+func (b *Book) SetRate(rate float32) {
 	b.rate = rate
 }
 
-func GetID(b Book) int {
+func (b *Book) ID() int {
 	return b.id
 }
 
-func GetTitle(b Book) string {
+func (b *Book) Title() string {
 	return b.title
 }
 
-func GetAuthor(b Book) string {
+func (b *Book) Author() string {
 	return b.author
 }
 
-func GetYear(b Book) int {
+func (b *Book) Year() int {
 	return b.year
 }
 
@@ -86,7 +86,7 @@ func GetSize(b Book) int {
 	return b.size
 }
 
-func GetRate(b Book) float32 {
+func (b *Book) Rate() float32 {
 	return b.rate
 }
 
