@@ -82,7 +82,7 @@ func (b *Book) Year() int {
 	return b.year
 }
 
-func GetSize(b Book) int {
+func (b *Book) Size() int {
 	return b.size
 }
 
